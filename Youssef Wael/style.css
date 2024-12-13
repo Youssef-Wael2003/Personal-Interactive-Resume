@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
+    color: #fff;
+  }
+  
+  /* Header and Navigation */
+  header {
+    background-color: #333333;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding-right : 25px;
+  }
+  
+  nav ul li a:hover {
+    color: #ff9800;
+  }
+
+
+  
+  .menu-toggle {
+    padding-left: 280px;
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* General Section Styles with Background Images */
+  .section {
+    padding: 150px 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+  }
+  
+  /* Overlay for Readability */
+  .section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  .section h1,
+  .section h2,
+  .section p,
+  .section ul {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Background Images for Each Section */
+  #home {
+    background-image: url('images/home-bg.jpeg');
+  }
+  
+  #about {
+    background-image: url('images/about-bg.jpeg');
+  }
+  
+  #skills {
+    background-image: url('images/skills-bg.jpeg');
+  }
+  
+  #projects {
+    background-image: url('images/projects-bg.jpeg');
+  }
+  
+  #contact {
+    background-image: url('images/contact-bg.jpeg');
+  }
+  
+  /* Skills List */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills-list li {
+    background: #ff9800;
+    padding: 10px 20px;
+    margin: 5px;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Project Cards */
+  .project-card {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Contact Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  form input,
+  form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background: #1e88e5;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background: #1565c0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #444;
+      width: 100%;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    nav ul li {
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .project-card {
+      width: 90%;
+    }
+  
+    .skills-list li {
+      padding: 8px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .skills-list li {
+      padding: 10px 10px;
+    }
+  
+    form input,
+    form textarea {
+      width: 100%;
+    }
+  
+    header .logo {
+      font-size: 1.2rem;
+    }
+  }
+  
